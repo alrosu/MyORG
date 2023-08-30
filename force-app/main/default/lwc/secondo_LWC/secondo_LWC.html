@@ -1,0 +1,87 @@
+<template>
+
+   
+
+    <lightning-card  title="Foto" variant="narrow" icon-name="standard:opportunity">
+
+        <div class="slds-grid slds-gutters" >    
+
+            <div class="slds-col slds-size_1-of-3" >  
+
+                <div class="slds-m-top_xx-large">
+
+                <lightning-button variant="Brand Outline" label="Mostra Img" onclick={showImg} class="slds-align_absolute-center slds-m-left_x-small slds-m-around_medium"></lightning-button>
+
+                <lightning-button variant="Brand Outline" label="Nascondi Img" onclick={notShowImg} class="slds-align_absolute-center slds-m-left_x-small slds-m-around_medium"></lightning-button>
+
+                </div>
+
+                <br/>
+
+                <div class="slds-align_absolute-center slds-col slds-size_2-of-3">
+
+                <lightning-button variant="destructive" label="Account" onclick={getAcc} class="slds-m-left_x-small slds-m-around_medium"></lightning-button>
+
+                <lightning-button variant="destructive" label="Opportunity" onclick={getOpp} class="slds-m-left_x-small slds-m-around_medium"></lightning-button>
+
+                </div>
+
+            </div>
+
+       
+
+           
+
+            <div class="slds-col slds-size_2-of-3 slds-m-bottom_xx-large">
+
+                <div>
+
+                <template lwc:if={booleanUnicorn}>
+
+                    <img src="https://cdn.wamiz.fr/cdn-cgi/image/format=auto,quality=80,width=1200,height=675,fit=cover/article/main-picture/61263a01a30cd669763798.jpg" width="250" height="250">
+
+                   
+
+                </template>
+
+                <br/>
+
+                <br/>  
+
+                <template lwc:if={booleanAcc}>
+
+                    <lightning-datatable class="slds-align_absolute-center slds-m-right_large" key-field="id" data={dataAcc} columns={columnsAcc}>
+
+                       
+
+                    </lightning-datatable>
+
+                </template>
+
+                <br/>
+
+                <br/>
+
+                <template lwc:if={booleanOpp}>
+
+                    <lightning-datatable class="slds-align_absolute-center slds-m-right_large" key-field="id" data={dataOpp} columns={columnsOpp}>
+
+                       
+
+                    </lightning-datatable>
+
+ 
+
+                </template>
+
+                </div>
+
+            </div>
+
+        </div>
+
+ 
+
+    </lightning-card>
+
+</template>

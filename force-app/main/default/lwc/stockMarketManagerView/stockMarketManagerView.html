@@ -1,0 +1,46 @@
+
+<template>
+    <!-- creo una card che conterrà il datatable, i pusanti e le medie ponderate-->
+    <!-- icon-name="custom:stock market manager" mi permette di aggiungere un'icona e un titolo al mio componente-->
+    <lightning-card icon-name="custom:stock market manager">
+        
+           
+            <div class="slds-col ">
+                <div style="height: 300px;">
+                    <!--Datatable-->
+                <lightning-datatable
+                    key-field="id"
+                    columns={columnsStock}
+                    data={data}
+                    hide-checkbox-column
+                    default-sort-direction={defaultSortDirection}
+                    sorted-direction={sortDirection}
+                    sorted-by={sortedBy}
+                    onsort={onHandleSort}>
+                </lightning-datatable>
+            </div>
+                <br>
+                <!-- div che contiene i due pulsanti -->
+                <div class="slds-grid slds-grid_align-center">
+                    <div class="slds-col slds-size_1-of-6" >
+                        <lightning-button variant="brand" label="Calculate" title="Calculate" onclick={handleCalculateClick}></lightning-button>
+                        
+                    </div>
+                <!-- questo div vuoto mi serve per gestire lòa distanza tra i due pulsanti -->
+                    <div class="slds-col slds-grow-none"></div>
+                    <div class="slds-col slds-size_1-of-6">
+                        <lightning-button variant="brand" label="SELL" title="SELL" onclick={handleSellClick} ></lightning-button>
+                    </div>
+                </div>
+                
+                <!-- Average -->
+                <div>
+                    <p>Average Starting Price: {averageStartingPrice} $</p>
+                    <p>Average Forecast Price: {averageForecastPrice} $</p>
+                    <p>Average Revenue: {averageRevenue} $</p>
+                </div>
+            </div>
+            
+    
+    </lightning-card>
+</template>

@@ -1,0 +1,10 @@
+{
+  "salesforcedx-vscode-core.retrieve-test-code-coverage": true, 
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/.sfdx": true
+  },
+  "visualforce.format.contentUnformatted": "",
+  "salesforcedx-vscode-core.push-or-deploy-on-save.enabled": true
+}

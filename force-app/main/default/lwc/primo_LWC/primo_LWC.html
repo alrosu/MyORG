@@ -1,0 +1,30 @@
+<template>
+<div class="slds-grid slds-gutters">
+    <div class="slds-col" align="center">
+        <lightning-card>
+        
+        <lightning-button label="Roma" onclick={mostra} align="top" ></lightning-button>
+        <br><br><br>
+        <lightning-button label="Milano" onclick={mostra} align="top"></lightning-button>
+        <br><br><br>
+        <lightning-button label="Napoli" onclick={mostra} align="top"></lightning-button></lightning-card>
+        <br><br><br>
+        
+
+
+        <div class="slds-col" >
+
+                <img if:false={prima} src="https://static2-viaggi.corriereobjects.it/wp-content/uploads/2015/06/roma-cosa-vedere-cosa-fare-1080x721.jpg?v=1687618444" alt="Roma" width="250" height="250" style="display: none">
+                <img if:true={prima} src="https://static2-viaggi.corriereobjects.it/wp-content/uploads/2015/06/roma-cosa-vedere-cosa-fare-1080x721.jpg?v=1687618444" alt="Roma" width="250" height="250" style="display: block">
+
+                <img if:false={seconda} src="https://www.yesmilano.it/sites/default/files/articolo/copertina/6143/22465/Copertina-milano-at-a-glance-ph-photophonico.png" alt="Milano" width="250" height="250" style="display: none">
+                <img if:true={seconda} src="https://www.yesmilano.it/sites/default/files/articolo/copertina/6143/22465/Copertina-milano-at-a-glance-ph-photophonico.png" alt="Milano" width="250" height="250" style="display: block">
+
+                <img if:false={terza} src="https://hips.hearstapps.com/hmg-prod/images/napoli-1653914862.png" alt="Napoli" width="250" height="250" style="display: none">
+                <img if:true={terza} src="https://hips.hearstapps.com/hmg-prod/images/napoli-1653914862.png" alt="Napoli" width="250" height="250" style="display: block">
+        </div>
+    </div>
+    
+    
+</div>
+</template>
